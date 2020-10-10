@@ -1,0 +1,46 @@
+Cats, Dogs, and a Boat Algorithm
+
+state = initial first node contains three cats and three dogs and a boat on the left
+Distance traveled is 0
+Possibilities = FIFO queue with first node
+Explored is an empty set
+
+Loop
+    If there are more dogs than cats in either side of the river or there are no more nodes return failed
+    node = possibilities.pop()
+    Distance += 1
+    Add node.STATE to explored
+    For each action in the node.STATE do
+        Perform the action of moving cats/dogs
+        Node = child_node
+            If the node.state is not in Explored or in Possibilities
+                if all three cats and dogs are on the right, return node
+            Possibilities.append(child_node)
+
+Why do you think people have a hard time solving this puzzle?
+
+I think that keeping track of the states as well as thinking of all the possible scenarios for each of those states can really confuse you. I was constantly getting confused as to when to update the current state and when to take into account of the following possibilities. When drawing out the problem, although it was longer to show all of the possible states, it was easier because I could visually see what I had already taken care of. Breadth first search is meant to solve the whole problem which can get quite abstract.
+
+
+function(number)
+	if number is divisible by 2
+		for(k = 1, k <= number, k++)
+			if 2k == number
+				return k
+	else 
+		for(k = 1, k <= number, k++)
+			if 2k + 1 == number
+				return k
+
+
+
+
+
+
+
+
+
+
+
+
+
