@@ -9,7 +9,11 @@ Created on Tue Nov 10 22:24:47 2020
 def read_file():
     f = open("test.txt", "r")
     r = f.readlines()
-    # split_comma = r.split(",")
+    arr = []
+    for c in r:
+        if c == "(":
+            arr.append()
+            
     print(r)
     f.close()
     
